@@ -62,8 +62,11 @@ app.use("/",postRoutes);
 //     res.redirect('Bookingpage.html');
 // })
 
+require("dotenv").config();
+let port=process.env.PORT;
+let host=process.env.HOST;
 app.set("view engine","hbs");
-app.listen(8080,function(err){
+app.listen(port,host,(err)=>{
     if(err){console.log("Error here");}
-    console.log("listening...8080");
+    console.log(`listening...${host}:${port}`);
 });

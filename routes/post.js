@@ -2,7 +2,7 @@ var express = require("express");
 var postController=require("../controller/postController");
 var router=express.Router();
 
-router.get('/register',function(req,res){
+router.get('/registerpage',function(req,res){
     res.redirect("registerpage.html");
 })
 router.post('/signup',postController.store);
